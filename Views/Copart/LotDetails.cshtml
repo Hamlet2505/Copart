@@ -1,1 +1,54 @@
-﻿
+﻿@model IEnumerable<Copart.Models.Output.LotDetailsOutput>
+
+
+<form method="get">
+    <button asp-controller="Copart" asp-action="GetLotDetails" class="bg-info">Get</button>
+    <input id="lotNumber" type="text" name="lotNumber">
+</form>
+
+<table class="table">
+    <tr>
+        <th>
+            A
+        </th>
+        <th>
+            B
+        </th>
+        <th>
+            C
+        </th>
+        <th>
+            D
+        </th>
+        <th>
+            E
+        </th>
+    </tr>
+
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.car_Atr.data.lotDetails.brand);
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.car_Atr.data.lotDetails.aan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.car_Atr.data.lotDetails.ad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.car_Atr.data.lotDetails.at)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.car_Atr.data.lotDetails.bf)
+                </td>
+                @*<td>
+                        @Html.ActionLink("Orders", "Index", "Order", new { customerid = item.CustomerID }, null)
+                    </td>*@
+            </tr>
+        }
+    }
+</table>

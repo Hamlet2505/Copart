@@ -1,5 +1,7 @@
-﻿using Copart.Services;
+﻿using Copart.Models.Output;
+using Copart.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace Copart.Controllers
 {
@@ -21,7 +23,9 @@ namespace Copart.Controllers
         public IActionResult GetLotDetails(string lotNumber)
         {
             var result = copartDataService.GetLotDetails(lotNumber);
-            return Ok(result); 
+            var returnList = new List<LotDetailsOutput>();
+            returnList.Add(result);
+            return View("LotDetails", returnList);
         }
     }
 }
