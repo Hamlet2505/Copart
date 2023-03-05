@@ -9,19 +9,19 @@
 <table class="table">
     <tr>
         <th>
-            A
+            Name
         </th>
         <th>
-            B
+            Engine
         </th>
         <th>
-            C
+            Color
         </th>
         <th>
-            D
+            Lot
         </th>
         <th>
-            E
+            Place
         </th>
     </tr>
 
@@ -31,19 +31,19 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.car_Atr.data.lotDetails.brand);
+                    @Html.DisplayFor(modelItem => item.car_Atr.data.lotDetails.ld)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.car_Atr.data.lotDetails.aan)
+                    @Html.DisplayFor(modelItem => item.car_Atr.data.lotDetails.egn)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.car_Atr.data.lotDetails.ad)
+                    @Html.DisplayFor(modelItem => item.car_Atr.data.lotDetails.clr)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.car_Atr.data.lotDetails.at)
+                    @Html.DisplayFor(modelItem => item.car_Atr.data.lotDetails.ln)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.car_Atr.data.lotDetails.bf)
+                    @Html.DisplayFor(modelItem => item.car_Atr.data.lotDetails.syn)
                 </td>
                 @*<td>
                         @Html.ActionLink("Orders", "Index", "Order", new { customerid = item.CustomerID }, null)
